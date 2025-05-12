@@ -106,3 +106,8 @@ let newText1 = texty.replace("Microsoft", "W3Schools");
 let textm = "Please visit Microsoft and Microsoft!";
 let newText = textm.replace(/Microsoft/g, "W3Schools");
 console.log(newText);
+
+//Including quotes in strings
+const goodQuotes1 = 'She said "I think so!"';
+const goodQuotes2 = `She said "I'm not going in there!"`;
+

@@ -44,7 +44,7 @@ comments.forEach(comment => {
   commentsContainer.appendChild(p);
 });*/
 
-// Define the function first
+/* Define the function first
 function updateUserStatus(userId, isActive) {
   console.log(`User ${userId} status updated to active: ${isActive}`);
   // In a real app, this might be an API call or DB update
@@ -59,4 +59,83 @@ const usersToUpdate = [
 // Now this works correctly
 usersToUpdate.forEach(user => {
   updateUserStatus(user.id, true); // mark as active
-});
+});*/
+
+function map(f, a) {
+  const result = new Array(a.length);
+  for (let i = 0; i < a.length; i++) {
+    result[i] = f(a[i]);
+  }
+  return result;
+}
+
+const numbers = [0, 1, 2, 5, 10];
+const cubedNumbers = map(function (x) {
+  return x * x * x;
+}, numbers);
+console.log(cubedNumbers); // [0, 1, 8, 125, 1000]
+//////////////////
+//factorial
+function factorial(n) {
+  if (n === 0 || n === 1) {
+    return 1;
+  } else {
+    return n * factorial(n - 1);
+  }
+}
+console.log(factorial(1)); // 1
+console.log(factorial(2)); // 2
+console.log(factorial(3)); // 6
+console.log(factorial(4)); // 24
+console.log(factorial(5)); // 120
+/////////////////////////////////////
+
+function foo(i) {
+  if (i < 0) {
+    return;
+  }
+  console.log(`begin: ${i}`);
+  foo(i - 1);
+  console.log(`end: ${i}`);
+}
+foo(3);
+
+// Logs:
+// begin: 3
+// begin: 2
+// begin: 1
+// begin: 0
+// end: 0
+// end: 1
+// end: 2
+// end: 3
+//////////////////////////
+nested function
+
+// The following variables are defined in the global scope
+const num1 = 20;
+const num2 = 3;
+const name = "Chamakh";
+
+// This function is defined in the global scope
+function multiply() {
+  return num1 * num2;
+}
+
+console.log(multiply()); // 60
+
+// A nested function example
+function getScore() {
+  const num1 = 2;
+  const num2 = 3;
+
+  function add() {
+    return `${name} scored ${num1 + num2}`;
+  }
+
+  return add();
+}
+
+console.log(getScore()); // "Chamakh scored 5"
+//////////////////
+An object containing methods for manipulating the inner variables of the outer function can be returned
