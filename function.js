@@ -194,3 +194,18 @@ const person1 = {
 }
 
 person.fullName.call(person1, "Oslo", "Norway");
+
+///////////////////
+const factorial = function fac(n) {
+  return n < 2 ? 1 : n * fac(n - 1);
+};
+
+console.log(factorial(3)); // 6
+//callback fun
+function num(n, callback) {
+    return callback(n);
+}
+
+const double = (n) => n * 2;
+
+console.log(num(5, double));
