@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Why is it possible to try-catch
+        an async-await call ?
+    </title>
+</head>
+
+<body>
+    <span>Click the button</span>
+
+    <button onclick="getData()">
+        Click here
+    </button>
+    
+    <script>
+        async function getData() {
+            try {
+
+                const rollnodata = await report1;
+                console.log(rollnodata);
+                const biodatas = await getnames(rollnodata[1]);
+                console.log(biodatas);
+                return biodatas;
+            }
+            catch (error) {
+                console.log(`The error is: ${error}`);
+            }
+        }
+    </script>
+</body>
+
+</html>*/

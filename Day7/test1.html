@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Why is it possible to try-catch an async-await call?</title>
+</head>
+
+<body>
+    <span>Click the button</span>
+
+    <button onclick="getData()">Click here</button>
+
+    <script>
+        // Simulate an API that returns a list of roll numbers
+        const report1 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve([101, 102, 103]);
+            }, 1000);
+        });
+
+        // Simulate another API that takes a roll number and returns bio data
+        function getnames(rollNo) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve({ roll: rollNo, name: "Pushkar" });
+                }, 1000);
+            });
+        }
+
+        async function getData() {
+            try {
+                const rollnodata = await report1;
+                console.log(rollnodata);
+                const biodatas = await getnames(rollnodata[1]);
+                console.log(biodatas);
+                return biodatas;
+            } catch (error) {
+                console.log(`The error is: ${error}`);
+            }
+        }
+    </script>
+</body>
+
+</html>
