@@ -16,5 +16,8 @@ async function asyncCall() {
   // Expected output: "resolved"
 }
 
-asyncCall();
-//resolveAfter2Seconds().then(tt => console.log(tt, "thhen")).catch(rr=>console.log(rr,"catch"));
+// asyncCall();
+ resolveAfter2Seconds().then(tt => console.log(tt, "thhen")).catch(rr=>console.log(rr,"catch"));
+
+let testFun = ( hjh ) => console.log(hjh, "thhen")
+testFun("hello ")

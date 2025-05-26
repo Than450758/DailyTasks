@@ -93,6 +93,8 @@ function multiplier(x) {
   };
 }
 const double = multiplier(2);
+console.log(double); // 10
+
 console.log(double(5)); // 10
 //eg2
 function add(a,b) {

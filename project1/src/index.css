@@ -1,0 +1,83 @@
+@import "tailwindcss";
+/** {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 80px;
+}
+
+.nav ul li {
+  cursor: pointer;
+}
+
+.main-content {
+  text-align: center;
+  padding: 20px 0;
+}*/
+/* General Resets */
+
+.steps-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.step {
+  flex: 1;
+  margin: 0 10px;
+  padding: 20px;
+  background-color: #ffffff;
+ 
+ 
+  text-align: center;
+}
+
+.step-number {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffcc00; /* Yellow color for step numbers */
+}
+
+h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #343a40; /* Dark color for heading */
+}
+
+p {
+  color: #6c757d; /* Grey color for paragraph text */
+}
+
+a {
+  color: #007bff; /* Link color */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

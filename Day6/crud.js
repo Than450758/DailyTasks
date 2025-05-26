@@ -59,3 +59,37 @@ const createFun = (payload) => {
 }
 const nn=createFun({ id: 4, name: 'stude D', age: 5, grade: 7 })
 console.log(nn)
+
+////////////////////////////////////
+let users = [
+  { id: 1, name: 'Alice' },
+  { id: 2, name: 'Bob' }
+];
+//create
+function createUser(id, name) {
+  users.push({ id, name });
+}
+createUser(3, 'Charlie');
+console.log(users);
+//read
+function getUser(id) {
+  return users.find(user => user.id === id);
+}
+
+console.log(getUser(2)); // { id: 2, name: 'Bob' }
+//update
+function updateUser(id, newName) {
+  const user = users.find(user => user.id === id);
+  if (user) {
+    user.name = newName;
+  }
+}
+
+updateUser(1, 'Alicia');
+console.log(users);
+//delete
+function deleteUser(id) {
+  users = users.filter(user => user.id !== id);
+}
+deleteUser(2);
+console.log(users);
